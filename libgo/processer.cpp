@@ -10,7 +10,7 @@ std::atomic<uint32_t> Processer::s_id_{0};
 Processer::Processer()
     : id_(++s_id_)
 {
-    ts_runnable_list_.check_ = runnable_list_.check_;
+    ts_runnable_list_.check_ = runnable_list_.check_ = (void*)&s_id_;
 }
 
 void Processer::AddTaskRunnable(Task *tk)

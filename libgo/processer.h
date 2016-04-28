@@ -34,6 +34,8 @@ public:
     uint32_t GetTaskCount();
 
     Task* GetCurrentTask();
+
+
 };
 
 } //namespace co
